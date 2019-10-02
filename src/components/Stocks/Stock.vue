@@ -9,7 +9,7 @@
       <v-container fill-height>
         <v-text-field label="quantidade" type="number" v-model.number="quantity"/>
           <v-btn class="class green darken-3 white--text" :disabled="quantity <= 0" @click="buyStock">
-            compra
+            Compra
           </v-btn>
       </v-container>
     </v-card>
@@ -32,7 +32,7 @@ export default {
         stockPrice: this.stock.price,
         quantity: this.quantity
       }
-      console.log(order)
+      this.$store.dispatch('buyStock', order)
       this.quantity = 0
     }
   }
