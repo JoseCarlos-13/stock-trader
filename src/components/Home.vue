@@ -10,7 +10,7 @@
       <span>Você pode salvar e carregar os dados</span>
     </v-sheet>
     <v-divider class="my-4" />
-    <p><strong>Seu Saldo:</strong> {{ funds }}</p>
+    <p><strong>Seu Saldo:</strong> {{ funds | currency }}</p>
   </div>
 </template>
 
